@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for (let i = 10; i >= 0; i--) {
+  console.log(`あと ${i}日`);
+}
+
+const scores = [23, 56, 78, 33, 78, 20, 55, 67, 78];
+let maxScore = 0;
+for (let i = 0; i < scores.length ; i++) {
+  if (maxScore < scores[i]) {
+    maxScore = scores[i];
+  }
+}
+console.log(`最高得点は ${maxScore}点 です！`);
+
+/*
+コメントアウトの方法
+*/
+let a = [];
+console.log(a); // [] と表示
+console.log(a.length); // 0 と表示
+//変数.pushで列に変数を加える事が出来る
+a.push('X');
+console.log(a); // ["X"] と表示
+console.log(a.length); // 1 と表示
+a.push('Y');
+console.log(a); // ["X", "Y"] と表示
+console.log(a.length); // 2 と表示
+
+
+//以下のように機能を自分で作ることができる。
+function areaOfCircle(r) {
+  let area = r * r * 3.14;
+  return area;
+}
+document.write('<p>半径 5cm の円の面積は ' + areaOfCircle(5) + 'です。</p>');
+document.write('<p>半径 10cm の円の面積は ' + areaOfCircle(10) + 'です。</p>');
+document.write('<p>半径 15cm の円の面積は ' + areaOfCircle(15) + 'です。</p>');
+
+
+
+let myBirthTime = new Date(1982, 11, 17, 12, 30);
+function updateParagraph() {
+  let now = new Date();
+  let seconds = (now.getTime() - myBirthTime.getTime()) / 1000;
+  document.getElementById('birth-time').innerText =
+    '生まれてから' + seconds + '秒経過。';
+}
+setInterval(updateParagraph, 50);
+
+        </script>
+
+<p id="birth-time"></p>
+<script src="function.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    let age = 16;
+//以下のようにnullで変数を作る必要があるのか。
+let result = null;
+if (age >= 20) {
+  result = '成年';
+} else {
+  result = '未成年';
+}
+document.write(result);
+
+let agee = 65;
+let isMember = true;
+let resultt = null;
+if (agee >= 60 && isMember) {
+  resultt = 'シニア会員割引の対象です';
+} else {
+  resultt = 'シニア会員割引の対象ではありません';
+}
+document.write(resultt);
+
+const number = 3;
+if (number % 3 === 0) {
+  console.log(`サァン！`);
+} else {
+  console.log(number);
+}
+
+</script>
+</body>
+</html>
